@@ -1,0 +1,133 @@
+/* General Styles */
+.firstSection {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 130px 0;
+      flex-wrap: wrap; /* Allow wrapping for small screens */
+      padding: 0 20px; /* Add padding for smaller devices */
+}
+
+.firstSection > div {
+      width: 45%; /* Adjust width for better flexibility */
+      text-align: center; /* Center-align content for smaller screens */
+      margin-bottom: 20px; /* Add space between sections on small screens */
+}
+
+.leftSection {
+      font-size: 2.5rem;
+}
+
+.leftSection .btn {
+      padding: 12px;
+      background-color: #1e2167;
+      color: white;
+      border: 2px solid white;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px; /* Add space between buttons */
+}
+
+.leftSection .buttons {
+      padding: 20px 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; /* Wrap buttons for smaller screens */
+}
+
+.leftSection a {
+      text-decoration: none;
+      color: white;
+}
+
+.rightSection img {
+      height: auto;
+      width: 100%;
+      max-width: 400px; /* Ensure the image doesn't stretch too much */
+      border-radius: 20px;
+}
+
+.purple {
+      color: rgb(170, 107, 228);
+}
+
+#element {
+      color: rgb(170, 107, 228);
+}
+
+main hr {
+      border: 0;
+      background: #9c97f1;
+      height: 1.2px;
+      margin: 60px auto;
+      max-width: 90%; /* Restrict width for smaller screens */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+      .firstSection > div {
+            width: 50%; /* Adjust width for tablets */
+      }
+
+      .leftSection {
+            font-size: 2rem; /* Reduce font size for better readability */
+      }
+
+      .leftSection .btn {
+            font-size: 14px; /* Adjust button size */
+            padding: 10px;
+      }
+}
+
+@media screen and (max-width: 768px) {
+      .firstSection {
+            flex-direction: column; /* Stack sections vertically on small screens */
+      }
+
+      .firstSection > div {
+            width: 90%; /* Make sections full-width */
+      }
+
+      .leftSection {
+            font-size: 1.8rem; /* Smaller font size for mobile devices */
+      }
+
+      .leftSection .buttons {
+            flex-direction: column; /* Stack buttons vertically */
+      }
+
+      .leftSection .btn {
+            font-size: 14px;
+            padding: 8px;
+            margin: 10px 0; /* Add vertical spacing */
+      }
+
+      .rightSection img {
+            max-width: 300px; /* Reduce image size */
+      }
+
+      main hr {
+            margin: 40px auto;
+            width: 80%; /* Further reduce width for small devices */
+      }
+}
+
+@media screen and (max-width: 480px) {
+      .leftSection {
+            font-size: 1.5rem; /* Adjust font size for very small screens */
+      }
+
+      .rightSection img {
+            max-width: 250px; /* Further reduce image size */
+      }
+
+      .leftSection .btn {
+            font-size: 12px;
+            padding: 6px; /* Smaller padding for buttons */
+      }
+
+      main hr {
+            width: 70%; /* Further narrow the horizontal rule */
+      }
+}

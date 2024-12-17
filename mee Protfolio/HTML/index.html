@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="/CSS/style.css">
+      <link rel="stylesheet" href="/CSS/main.css">
+      <title>Salar - Developer Portfolio</title>
+</head>
+
+<body>
+      <header>
+            <nav>
+                  <div class="left"><img src="/IMG/mainlogo.png" alt="Logo"></div>
+                  <div class="menu" onclick="toggleMenu()">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                  </div>
+                  <div class="right">
+                        <ul>
+                              <li><a href="/HTML/home.html" target="_blank">Home</a></li>
+                              <li><a href="/HTML/about.html" target="_blank">About</a></li>
+                              <li><a href="/HTML/Services.html" target="_blank">Services</a></li>
+                              <li><a href="/HTML/project.html" target="_blank">Projects</a></li>
+                              <li><a href="/HTML/contact.html" target="_blank">Contact</a></li>
+                              <button class="sing-btn"><a href="/HTML/Singup.html" target="_blank">Sign Up</a></button>
+                        </ul>
+                  </div>
+            </nav>
+      </header>
+      <main>
+            <section class="firstSection">
+                  <div class="leftSection">
+                        Hi, My name is <span class="purple">Salar</span>
+                        <div>And I am passionate</div>
+                        <span id="element"></span>
+                        <div class="buttons">
+                              <button class="btn"><a href="resume.html" target="_blank">Download Resume</a></button>
+                              <button class="btn">Visit Github</button>
+                        </div>
+                  </div>
+                  <div class="rightSection">
+                        <img src="/IMG/mee img.JPG" alt="Profile Image">
+                  </div>
+            </section>
+            <hr>
+      </main>
+      <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-container">
+          <!-- About Section -->
+          <div class="footer-about">
+              <h3>About Me</h3>
+              <p>Passionate developer focusing on creating innovative digital solutions for businesses and individuals. Let's connect and make something great together!</p>
+          </div>
+
+          <!-- Quick Links Section -->
+          <div class="footer-links">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="/HTML/home.html">Home</a></li>
+                  <li><a href="/HTML/about.html">About</a></li>
+                  <li><a href="/HTML/Services.html">Services</a></li>
+                  <li><a href="/HTML/project.html">Porjects</a></li>
+                  <li><a href="/HTML/contact.html">Contact</a></li>
+              </ul>
+          </div>
+
+          <!-- Social Media Section -->
+          <div class="footer-social">
+              <h3>Follow Me</h3>
+              <ul>
+                  <li><a href="https://www.instagram.com/salaarr.1914/profilecard/?igsh=MnNqMmo3dTF4dW1j" target="_blank">Instagram</a></li>
+                  <li><a href="https://twitter.com" target="_blank">Whatsaap</a></li>
+                  <li><a href="https://www.linkedin.com/in/salar-ahmad-10510431a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a></li>
+                  <li><a href="https://github.com/salarahmad786/pro.git" target="_blank">GitHub</a></li>
+              </ul>
+          </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+          <p>&copy; 2024 Salar. All Rights Reserved.</p>
+      </div>
+  </footer>
+  <!-- footer ka script -->
+  <script>
+      document.addEventListener('DOMContentLoaded', () => {
+    console.log('Footer loaded successfully!');
+    // Future interactive features can be added here, like smooth scrolling, etc.
+});
+  </script>
+
+      <!-- Load library from the CDN -->
+      <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+      <!-- Setup and start animation! -->
+      <script>
+            var typed = new Typed('#element', {
+                  strings: ['Web Developer.', 'Web Designer.', 'App Developer.', 'Graphic Designer.', 'Video Editor.'],
+                  typeSpeed: 50,
+            });
+      </script>
+      <script>
+            function toggleMenu() {
+                  const navUl = document.querySelector("nav ul");
+                  navUl.classList.toggle("active");
+            }
+      </script>
+</body>
+</html>

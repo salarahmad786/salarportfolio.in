@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Base Styles */
+.body-login {
+    font-family: "Poppins", sans-serif;
+    background: rgb(0, 0, 30);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-container {
+    background: rgb(153, 153, 226);
+    padding: 60px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-container h2 {
+    margin-bottom: 15px;
+    /* font-size: 24px; */
+    font-weight: 900;
+    color: black;
+}
+
+.login-container label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: black;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.login-container input:focus {
+    border-color: black;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background: rgb(22, 22, 60);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-container button:hover {
+    background: rgb(153, 153, 226);
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.footer-2 {
+    margin-top: 15px;
+    font-size: 14px;
+    color: black;
+}
+
+.footer-2 a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Responsive Styles */
+
+/* Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .login-container {
+        padding: 50px;
+        max-width: 360px;
+    }
+
+    .login-container h2 {
+        font-size: 22px;
+    }
+
+    .login-container button {
+        padding: 10px;
+        font-size: 15px;
+    }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 40px;
+        max-width: 340px;
+    }
+
+    .login-container h2 {
+        font-size: 20px;
+    }
+
+    .login-container input {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .login-container button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* Small phones (max-width: 480px) */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .login-container h2 {
+        font-size: 18px;
+    }
+
+    .login-container button {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+}

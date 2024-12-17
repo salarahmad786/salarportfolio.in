@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="/CSS/style.css">
+      <link rel="stylesheet" href="/CSS/contact.css">
+      <title>Salar - Contact Portfolio</title>
+</head>
+
+<body>
+      <header>
+            <nav>
+                  <div class="left"><img src="/IMG/mainlogo.png" alt="Logo"></div>
+                  <div class="menu" onclick="toggleMenu()">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                  </div>
+                  <div class="right">
+                        <ul>
+                              <li><a href="/HTML/home.html" target="_blank">Home</a></li>
+                              <li><a href="/HTML/about.html" target="_blank">About</a></li>
+                              <li><a href="/HTML/Services.html" target="_blank">Services</a></li>
+                              <li><a href="/HTML/project.html" target="_blank">Projects</a></li>
+                              <li><a href="/HTML/contact.html" target="_blank">Contact</a></li>
+                              <button class="sing-btn"><a href="/HTML/Singup.html" target="_blank">Sign Up</a></button>
+                        </ul>
+                  </div>
+            </nav>
+      </header>
+      <header>
+            <h1>Contact Us</h1>
+        </header>
+        <section class="contact-form">
+            <form id="contactForm" onsubmit="return validateForm()">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+    
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+    
+                <button type="submit">Send Message</button>
+            </form>
+            <div id="formResponse"></div>
+        </section>
+        <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-container">
+          <!-- About Section -->
+          <div class="footer-about">
+              <h3>About Me</h3>
+              <p>Passionate developer focusing on creating innovative digital solutions for businesses and individuals. Let's connect and make something great together!</p>
+          </div>
+
+          <!-- Quick Links Section -->
+          <div class="footer-links">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="/HTML/home.html">Home</a></li>
+                  <li><a href="/HTML/about.html">About</a></li>
+                  <li><a href="/HTML/Services.html">Services</a></li>
+                  <li><a href="/HTML/project.html">Porjects</a></li>
+                  <li><a href="/HTML/contact.html">Contact</a></li>
+              </ul>
+          </div>
+
+          <!-- Social Media Section -->
+          <div class="footer-social">
+              <h3>Follow Me</h3>
+              <ul>
+                  <li><a href="https://www.instagram.com/salaarr.1914/profilecard/?igsh=MnNqMmo3dTF4dW1j" target="_blank">Instagram</a></li>
+                  <li><a href="https://twitter.com" target="_blank">Whatsaap</a></li>
+                  <li><a href="https://www.linkedin.com/in/salar-ahmad-10510431a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a></li>
+                  <li><a href="https://github.com/salarahmad786/pro.git" target="_blank">GitHub</a></li>
+              </ul>
+          </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+          <p>&copy; 2024 Salar. All Rights Reserved.</p>
+      </div>
+  </footer>
+  <!-- footer ka script -->
+  <script>
+      document.addEventListener('DOMContentLoaded', () => {
+    console.log('Footer loaded successfully!');
+    // Future interactive features can be added here, like smooth scrolling, etc.
+});
+  </script>
+        <!-- contact java -->
+         <script>
+        function validateForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+        
+            // Basic validation
+            if (!name || !email || !message) {
+                document.getElementById('formResponse').innerHTML = "<p style='color: red;'>All fields are required!</p>";
+                return false;
+            }
+        
+            if (!validateEmail(email)) {
+                document.getElementById('formResponse').innerHTML = "<p style='color: red;'>Please enter a valid email address!</p>";
+                return false;
+            }
+        
+            // Simulate form submission (just for demonstration)
+            document.getElementById('formResponse').innerHTML = "<p style='color: green;'>Your message has been sent successfully!</p>";
+            document.getElementById('contactForm').reset(); // Reset form fields
+            return false; // Prevent actual form submission
+        }
+        
+        function validateEmail(email) {
+            const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            return regex.test(email);
+        }
+      </script>
+      <script>
+            function toggleMenu() {
+                  const navUl = document.querySelector("nav ul");
+                  navUl.classList.toggle("active");
+            }
+      </script>
+      </body>
+      </html>
